@@ -1,3 +1,5 @@
+#community_meaning = f"Tu ruta a la region: {region} {test} "
+
 user_community = input("Please enter the community: ")
 communities = {'1':'internal flag',
               'X':{'0':'All','1':'Europe','2':'Russia','3':'North America','4':'Asia','5':'Africa','6':'Middle East','7':'South America'},
@@ -22,21 +24,43 @@ communities = {'1':'internal flag',
                     '5':{'00':'All','01':'NAP Africa','99':'CenturyLink/SA/Johannesburg'},
                     '6':{'00':'All','98':'Infonas AS35313/Bahrain (IPTP AS51601)','99':'CenturyLink/AE/Dubai'},
                     '7':{'00':'All','01':'IX.BR','05':'JumboIX Lima Peru','06':'PIT Chile Santiago','07':'EIE (Sao Paolo)',
-                         '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}},
-              'Z':{'0':'no prepend','1':'1 prepends','2':'2 prepends','4':'4 prepends','9':'Do Not Announce'}}
+                         '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}}}
 
-index_0 = user_community[0]
-index_1 = user_community[1]
-index_2 = user_community[2]
-index_3 = user_community[3]
-index_4 = user_community[4]
-
-index_
-
-filter1 = communities[index_1]
-filter2 = communities['X']
+internal_flag = user_community[0]
+region_token = user_community[1]
+peer_number_token = user_community[2] + user_community[3]
+#peer_number_token = user_community[2:3]
+prepents_token = int(user_community[4])
 
 
-#print(f"Your community {user_community}...")
+region_dict = communities['X']
 
-print (user_community, index_0, index_1, index_2, index_3, index_4, filter1)
+if region_token in region_dict.keys():
+    region = region_dict[region_token]
+else:
+    region = 'Tu comunidad no existe'
+   #print(region)
+
+peer_location = communities['YY'][region_token]
+
+if peer_number_token in peer_location.keys():
+    peer = peer_location[peer_number_token]
+else:
+ #*   peer = region
+    #print(peer)
+if prepents_token <= 4:
+    test = f'puede ser anunciado a {peer} con {prepents_token} prepends'
+#  print(f'Tu comunidad {user_community} puede ser anunciado a [] con {index4} prepends')
+elif prepents_token <= 8:
+    test = 'no existe'
+else:
+    test = f' no puede ser anunciado al {peer} peer '
+
+#invalidar la comunidad entre 'Z' >= 8 y rechazar si es 9
+
+community_meaning = f"Tu ruta a la region: {region} {test} "
+
+print("Tu comunidad significa:")
+print(community_meaning)
+
+# Ruta que no se anuncia en la región {South America} al peer {Lumen Fortaleza}
