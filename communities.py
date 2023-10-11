@@ -1,5 +1,3 @@
-#community_meaning = f"Tu ruta a la region: {region} {test} "
-
 user_community = input("Please enter the community: ")
 communities = {'1':'internal flag',
               'X':{'0':'All','1':'Europe','2':'Russia','3':'North America','4':'Asia','5':'Africa','6':'Middle East','7':'South America'},
@@ -28,21 +26,18 @@ communities = {'1':'internal flag',
 
 internal_flag = user_community[0]
 region_token = user_community[1]
-peer_number_token = user_community[2] + user_community[3]
-#peer_number_token = user_community[2:3]
+peer_number_token = user_community[2:3]
 prepents_token = int(user_community[4])
-
 
 region_dict = communities['X']
 
 if region_token in region_dict.keys():
     region = region_dict[region_token]
 else:
-    region = 'Tu comunidad no existe'
+    region = "Your community doesn't existe"
    #print(region)
 
 peer_location = communities['YY'][region_token]
-
 if peer_number_token in peer_location.keys():
     peer = peer_location[peer_number_token]
 else:
@@ -55,8 +50,6 @@ elif prepents_token <= 8:
     test = 'no existe'
 else:
     test = f' no puede ser anunciado al {peer} peer '
-
-#invalidar la comunidad entre 'Z' >= 8 y rechazar si es 9
 
 community_meaning = f"Tu ruta a la region: {region} {test} "
 
