@@ -22,38 +22,38 @@ communities = {'1':'internal flag',
                     '5':{'00':'All','01':'NAP Africa','99':'CenturyLink/SA/Johannesburg'},
                     '6':{'00':'All','98':'Infonas AS35313/Bahrain (IPTP AS51601)','99':'CenturyLink/AE/Dubai'},
                     '7':{'00':'All','01':'IX.BR','05':'JumboIX Lima Peru','06':'PIT Chile Santiago','07':'EIE (Sao Paolo)',
-                         '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}}}
+                         '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}},
+               'Z': {'0': '0 prepents', '1': '1 prepents', '2': '2 prepents', '4': '4 prepents', '9': 'does not announce'}}
 
 internal_flag = user_community[0]
 region_token = user_community[1]
 peer_number_token = user_community[2:3]
-prepents_token = int(user_community[4])
+prepents_token = user_community[4]
 
 region_dict = communities['X']
 
 if region_token in region_dict.keys():
     region = region_dict[region_token]
 else:
-    region = "Your community doesn't existe"
-   #print(region)
+    region = "Your community does not exist"
 
 peer_location = communities['YY'][region_token]
+
 if peer_number_token in peer_location.keys():
     peer = peer_location[peer_number_token]
 else:
- #*   peer = region
-    #print(peer)
-if prepents_token <= 4:
-    test = f'puede ser anunciado a {peer} con {prepents_token} prepends'
-#  print(f'Tu comunidad {user_community} puede ser anunciado a [] con {index4} prepends')
-elif prepents_token <= 8:
-    test = 'no existe'
+    peer = region
+
+prepents_number = communities['Z'][prepents_token]
+
+if prepents_token in prepents_number.keys():
+    prepents = f'can be announced to {peer} with {prepents_token}'
 else:
-    test = f' no puede ser anunciado al {peer} peer '
+    prepents = f' your prepents is invalided to {peer} peer'
 
-community_meaning = f"Tu ruta a la region: {region} {test} "
 
-print("Tu comunidad significa:")
+community_meaning = f"Your community: {region} {prepents} "
+
+print("Your community mean: ")
 print(community_meaning)
 
-# Ruta que no se anuncia en la región {South America} al peer {Lumen Fortaleza}
