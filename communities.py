@@ -1,4 +1,10 @@
-user_community = input("Please enter the community: ")
+import sys
+
+if len(sys.argv)!=2:
+    print("Error, Execute: python3 communities.py community_number")
+    sys.exit(1)
+
+user_community = sys.argv[1]
 communities = {'1':'internal flag',
               'X':{'0':'All','1':'Europe','2':'Russia','3':'North America','4':'Asia','5':'Africa','6':'Middle East','7':'South America'},
               'YY':{'0':{'00':'All','01':'All IX peers','99':'All transit peers'},
