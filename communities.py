@@ -1,4 +1,10 @@
-user_community = input("Please enter the community: ")
+import sys
+
+if len(sys.argv)!=2:
+    print("Error, Execute: python3 communities.py number_community")
+    sys.exit(1)
+
+user_community = sys.argv[1]
 communities = {'1':'internal flag',
               'X':{'0':'All','1':'Europe','2':'Russia','3':'North America','4':'Asia','5':'Africa','6':'Middle East','7':'South America'},
               'YY':{'0':{'00':'All','01':'All IX peers','99':'All transit peers'},
@@ -23,37 +29,34 @@ communities = {'1':'internal flag',
                     '6':{'00':'All','98':'Infonas AS35313/Bahrain (IPTP AS51601)','99':'CenturyLink/AE/Dubai'},
                     '7':{'00':'All','01':'IX.BR','05':'JumboIX Lima Peru','06':'PIT Chile Santiago','07':'EIE (Sao Paolo)',
                          '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}},
-               'Z': {'0': '0 prepents', '1': '1 prepents', '2': '2 prepents', '4': '4 prepents', '9': 'does not announce'}}
+               'Z': {'0': 'announce with 0 prepends', '1': 'announce with 1 prepends', '2': 'announce with 2 prepends', '4': 'announce with 4 prepends', '9': 'does not announce'}}
 
 internal_flag = user_community[0]
 region_token = user_community[1]
-peer_number_token = user_community[2:3]
-prepents_token = user_community[4]
+peer_number_token = user_community[2:4]
+prepends_token = user_community[4]
 
 region_dict = communities['X']
 
 if region_token in region_dict.keys():
     region = region_dict[region_token]
 else:
-    region = "Your community does not exist"
+   print("your region does not exist")
 
 peer_location = communities['YY'][region_token]
 
 if peer_number_token in peer_location.keys():
     peer = peer_location[peer_number_token]
 else:
-    peer = region
+   print("your peer does not exist")
 
-prepents_number = communities['Z'][prepents_token]
-
-if prepents_token in prepents_number.keys():
-    prepents = f'can be announced to {peer} with {prepents_token}'
+prepends_number = communities['Z']
+if prepends_token in prepends_number.keys():
+    prepends = prepends_number[prepends_token]
 else:
-    prepents = f' your prepents is invalided to {peer} peer'
+    prepends = f', the  prepends is invalided'
 
+community_meaning = f"The prefix on the {region} region to the {peer} peer {prepends}"
 
-community_meaning = f"Your community: {region} {prepents} "
-
-print("Your community mean: ")
 print(community_meaning)
 
