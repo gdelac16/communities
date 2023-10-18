@@ -1,7 +1,7 @@
 import sys
 
 if len(sys.argv)!=2:
-    print("Error, Execute: python3 communities.py number_community")
+    print("Error, Execute: python3 communities.py community_number")
     sys.exit(1)
 
 user_community = sys.argv[1]
