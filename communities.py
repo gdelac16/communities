@@ -59,4 +59,3 @@ else:
 community_meaning = f"The prefix on the {region} region to the {peer} peer {prepends}"
 
 print(community_meaning)
-
