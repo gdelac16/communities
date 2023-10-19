@@ -43,21 +43,21 @@ prepends_number = communities['Z']
 def my_community(CXYYZ):
 
     if region_token in region_dict.keys():
-        region = region_dict[region_token]
-        print(region)
+       region = region_dict[region_token]
+    else:
+       region = "The region is invalid"
+       return region
 
     if peer_number_token in peer_location.keys():
-          peer = peer_location[peer_number_token]
-	  print(peer)
+        peer = peer_location[peer_number_token]
+    else:
+        peer = "The peer is invalid"
+        return peer
 
     if prepends_token in prepends_number.keys():
-            prepends = prepends_number[prepends_token]
+        prepends = prepends_number[prepends_token]
     else:
-            prepends = f'it has an invalid prepend'
-    else:
-         peer = "invalid"
-    else:
-       region = "the region is invalid"
+        prepends = f'it has invalid prepend'
 
     community_meaning = f"The prefix in the region of {region} to the {peer} peer, {prepends}."
     return community_meaning
