@@ -46,15 +46,15 @@ def my_community(CXYYZ):
         region = region_dict[region_token]
         print(region)
 
-      if peer_number_token in peer_location.keys():
+    if peer_number_token in peer_location.keys():
           peer = peer_location[peer_number_token]
 	  print(peer)
 
-        if prepends_token in prepends_number.keys():
+    if prepends_token in prepends_number.keys():
             prepends = prepends_number[prepends_token]
-        else:
+    else:
             prepends = f'it has an invalid prepend'
-      else:
+    else:
          peer = "invalid"
     else:
        region = "the region is invalid"
