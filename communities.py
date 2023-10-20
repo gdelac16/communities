@@ -36,24 +36,24 @@ region_token = user_community[1]
 peer_number_token = user_community[2:4]
 prepends_token = user_community[4]
 
-region_dict = communities['X']
-peer_location = communities['YY'][region_token]
-prepends_number = communities['Z']
-
-def my_community(CXYYZ):
-
+def my_community():
+    region_dict = communities['X']
     if region_token in region_dict.keys():
        region = region_dict[region_token]
     else:
        region = "The region is invalid"
        return region
-
+    
+    peer_location = communities['YY'][region_token]
+    
     if peer_number_token in peer_location.keys():
         peer = peer_location[peer_number_token]
     else:
         peer = "The peer is invalid"
         return peer
 
+    prepends_number = communities['Z']
+    
     if prepends_token in prepends_number.keys():
         prepends = prepends_number[prepends_token]
     else:
@@ -62,5 +62,5 @@ def my_community(CXYYZ):
     community_meaning = f"The prefix in the region of {region} to the {peer} peer, {prepends}."
     return community_meaning
 
-community = my_community(user_community)
+community = my_community()
 print(community)
