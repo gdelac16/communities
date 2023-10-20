@@ -57,7 +57,8 @@ def my_community():
     if prepends_token in prepends_number.keys():
         prepends = prepends_number[prepends_token]
     else:
-        prepends = "it has invalid prepend"
+        prepends = "The prepend is invalid"
+        return prepends
 
     community_meaning = f"The prefix in the region of {region} to the {peer} peer, {prepends}."
     return community_meaning
