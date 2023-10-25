@@ -1,14 +1,14 @@
 from distutils.core import setup
 
 setup(
-    name='git_edit_commit',
-    version='0.0.2',
-    py_modules=['git_edit_commit'],
+    name='communities',
+    version='1.2',
+    py_modules=['communities'],
     entry_points={
-        "console_scripts": ["git_edit_commit=git_edit_commit:command_line_tool"]
+        "console_scripts": ["communities=communities:command_line_tool"]
     },
     license='',
     author='Gladys',
     author_email='',
-    description='Edit commit configs metadata'
+    description='Know the meaning of the community'
 )
