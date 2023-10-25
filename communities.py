@@ -1,11 +1,7 @@
 import sys
 
-if len(sys.argv)!=2:
-    print("Error, Execute: python3 communities.py community_number")
-    sys.exit(1)
 
-user_community = sys.argv[1]
-communities = {'1':'internal flag',
+COMMUNITIES = {'1':'internal flag',
               'X':{'0':'All','1':'Europe','2':'Russia','3':'North America','4':'Asia','5':'Africa','6':'Middle East','7':'South America'},
               'YY':{'0':{'00':'All','01':'All IX peers','99':'All transit peers'},
                     '1':{'00':'All','01':'AMS-IX','02':'LINX LON1','03':'DE-CIX Frankfurt','04':'DTEL-IX','07':'(was LINX/E)',
@@ -31,20 +27,16 @@ communities = {'1':'internal flag',
                          '97':'Lumen Fortaleza','98':'Lumen San Paolo','99':'CenturyLink (Global Crossing)'}},
                'Z': {'0': 'announce with 0 prepends', '1': 'announce with 1 prepends', '2': 'announce with 2 prepends', '4': 'announce with 4 prepends', '9': 'does not announce'}}
 
-internal_flag = user_community[0]
-region_token = user_community[1]
-peer_number_token = user_community[2:4]
-prepends_token = user_community[4]
 
 def my_community(CXYYZ):
-    region_dict = communities['X']
+    region_dict = COMMUNITIES['X']
     if region_token in region_dict.keys():
        region = region_dict[region_token]
     else:
        region = "The region is invalid"
        return region
     
-    peer_location = communities['YY'][region_token]
+    peer_location = COMMUNITIES['YY'][region_token]
     
     if peer_number_token in peer_location.keys():
         peer = peer_location[peer_number_token]
@@ -52,7 +44,7 @@ def my_community(CXYYZ):
         peer = "The peer is invalid"
         return peer
 
-    prepends_number = communities['Z']
+    prepends_number = COMMUNITIES['Z']
     
     if prepends_token in prepends_number.keys():
         prepends = prepends_number[prepends_token]
@@ -63,5 +55,17 @@ def my_community(CXYYZ):
     community_meaning = f"The prefix in the region of {region} to the {peer} peer, {prepends}."
     return community_meaning
 
-community = my_community(user_community)
+
+if len(sys.argv)!=2:
+    print("Error, Execute: python3 communities.py community_number")
+    sys.exit(1)
+
+user_community = sys.argv[1]
+
+internal_flag = user_community[0]
+region_token = user_community[1]
+peer_number_token = user_community[2:4]
+prepends_token = user_community[4]
+
+community = my_community()
 print(community)
