@@ -10,5 +10,5 @@ setup(
     license='',
     author='Gladys',
     author_email='',
-    description='Know the meaning of the community'
+    description='Run my script to know the meaning of the community'
 )
