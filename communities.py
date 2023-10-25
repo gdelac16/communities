@@ -1,5 +1,4 @@
 import sys
-
 COMMUNITIES = {'1': 'internal flag',
                'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North America', '4': 'Asia', '5': 'Africa',
                      '6': 'Middle East', '7': 'South America'},
@@ -46,7 +45,8 @@ COMMUNITIES = {'1': 'internal flag',
                      '4': 'announce with 4 prepends', '9': 'does not announce'}}
 
 
-def my_community(CXYYZ):
+def my_community(user_community):
+    # CXYYZ structure fo ruser_communities
     internal_flag = user_community[0]
     region_token = user_community[1]
     peer_number_token = user_community[2:4]
@@ -79,11 +79,16 @@ def my_community(CXYYZ):
     return community_meaning
 
 
-if len(sys.argv) != 2:
-    print("Error, Execute: python3 communities.py community_number")
-    sys.exit(1)
+def my_test():
+    if len(sys.argv) != 2:
+        print("Error, Execute: communities community_number")
+        sys.exit(1)
 
-user_community = sys.argv[1]
+    user_community = sys.argv[1]
 
-community = my_community(user_community)
-print(community)
+    community = my_community(user_community)
+    print(community)
+
+
+if __name__ == "__main__":
+    my_test()

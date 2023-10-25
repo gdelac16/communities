@@ -5,11 +5,10 @@ setup(
     version='1.2',
     py_modules=['communities'],
     entry_points={
-        "console_scripts": ["communities=communities:command_line_tool"]
+        "console_scripts": ["communities=communities:my_test"]
     },
     license='',
     author='Gladys',
     author_email='',
-    description='Run my script to know the meaning of the community',
-    python_requires='>=3.5'
+    description='Show the meaning of community',
 )
