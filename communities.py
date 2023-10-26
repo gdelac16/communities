@@ -1,4 +1,5 @@
 import sys
+
 COMMUNITIES = {'1': 'internal flag',
                'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North America', '4': 'Asia', '5': 'Africa',
                      '6': 'Middle East', '7': 'South America'},
