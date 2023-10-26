@@ -1,8 +1,0 @@
-README.md
-communities.py
-setup.py
-communities.egg-info/PKG-INFO
-communities.egg-info/SOURCES.txt
-communities.egg-info/dependency_links.txt
-communities.egg-info/entry_points.txt
-communities.egg-info/top_level.txt
