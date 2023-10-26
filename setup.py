@@ -2,10 +2,10 @@ from distutils.core import setup
 
 setup(
     name='communities',
-    version='1.2',
+    version='1.3',
     py_modules=['communities'],
     entry_points={
-        "console_scripts": ["communities=communities:my_test"]
+        "console_scripts": ["communities=communities:run_script"]
     },
     license='',
     author='Gladys',
