@@ -85,16 +85,15 @@ def filter_of_community2(user_community):
     community_meaning = f"The prefix in the region of {region} to the {peer} peer"
     return community_meaning
 
-community_flag_1 = filter_of_community(user_community)
-community_flag_2 = filter_of_community2(user_community)
 
-def filter_internal(internal_flag_token):
+def filter_internal(user_community):
     internal_flag_token = user_community[0]
+            
+    if internal_flag_token == '1':
+        return filter_of_community(user_community)
+    else:
+        return filter_of_community2(user_community)
     
-    if interinternal_flag_token = '1'
-        print(community_flag_1)
-    else 
-        print (community_flag_2)
 
 def run_script():
     if len(sys.argv) != 2:
