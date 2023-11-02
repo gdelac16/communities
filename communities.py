@@ -36,14 +36,14 @@ def filter_of_community(user_community):
     peer_number_token = user_community[2:4]
     prepends_token = user_community[4]
 
-    region_dict = COMMUNITIES['X']
+    region_dict = COMMUNITIES['1']['X']
     if region_token in region_dict.keys():
         region = region_dict[region_token]
     else:
         region = "The region is invalid"
         return region
 
-    peer_location = COMMUNITIES['YY'][region_token]
+    peer_location = COMMUNITIES['1']['YY'][region_token]
 
     if peer_number_token in peer_location.keys():
         peer = peer_location[peer_number_token]
@@ -51,7 +51,7 @@ def filter_of_community(user_community):
         peer = "The peer is invalid"
         return peer
 
-    prepends_number = COMMUNITIES['Z']
+    prepends_number = COMMUNITIES['1']['Z']
 
     if prepends_token in prepends_number.keys():
         prepends = prepends_number[prepends_token]
