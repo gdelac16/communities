@@ -88,7 +88,7 @@ def filter_of_community2(user_community):
 community_flag_1 = filter_of_community(user_community)
 community_flag_2 = filter_of_community2(user_community)
 
-def filter_internal(internal_flag_token)
+def filter_internal(internal_flag_token):
     internal_flag_token = user_community[0]
     
     if interinternal_flag_token = '1'
