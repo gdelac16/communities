@@ -27,7 +27,10 @@ COMMUNITIES = {'1': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North
                                  '92': 'CMC IP Transit/VN', '93': 'GSL IP Transit/AU', '94': 'PCCW China Transit/HK', '95': 'PCCW IP Transit/TW', '96': 'PCCW IP Transit/TY', '97': 'China Unicom paid peering/HK', '98': 'PCCW IP Transit/SG', '99': 'PCCW IP Transit/HK'},
                             '5': {'00': 'All', '01': 'NAP Africa'},
                             '6': {'00': 'All', '98': 'Infonas AS35313/Bahrain (IPTP AS51601)', '99': 'CenturyLink/Dubai'},
-                            '7': {'00': 'All', '01': 'IX.BR (Sao Paolo)', '02': 'IX.BR (Fortaleza)', '03': 'Lima/CTL', '04': 'Lima/AmTel', '05': 'Lima/JumboIX', '06': 'Santiago/Level3(Huecheraba)', '07': 'EIE (Sao Paolo)', '98': 'CenturyLink/Brazil/Fortaleza', '99': 'CenturyLink/Peru/Lima'}}}}
+                            '7': {'00': 'All', '01': 'IX.BR (Sao Paolo)', '02': 'IX.BR (Fortaleza)', '03': 'Lima/CTL', '04': 'Lima/AmTel', '05': 'Lima/JumboIX', '06': 'Santiago/Level3(Huecheraba)', '07': 'EIE (Sao Paolo)', '98': 'CenturyLink/Brazil/Fortaleza', '99': 'CenturyLink/Peru/Lima'}}},
+               '3': {'3000 ': 'All direct customers', '3010': 'IX-Transit customers', '3020': 'All Anycast customers', '3100': 'EU direct customers', '3101': 'AMS direct customers additional community', '3120': 'EU Anycast customers', '3200': 'Russian direct customers', '3210': 'Russian IX-Transit customers', '3220': 'Russian Anycast customers', '3300': 'NA direct customers', '3320': 'NA Anycast customers', '3400': 'AP direct customers', '3401': 'HK direct customers additional community', '3402': 'SG direct customers additional community', '3403': 'TY direct customers additional community', '3404': 'VN direct customers additional community', '3405': 'MY direct customers additional community', '3406': 'TW direct customers additional community', '3407': 'ID direct customers additional community', '3408': 'KR direct customers additional community', '3410': 'AP IX-Transit customers', '3420': 'AP Anycast customers', '3500': 'Africa direct customers', '3520': 'Africa Anycast customers', '3600': 'ME direct customers', '3620': 'ME Anycast customers', '3700': 'South America direct customers', '3720': 'South America Anycast customers'},
+               
+              }
 
 
 def filter_of_community(user_community):
