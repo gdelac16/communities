@@ -47,7 +47,7 @@ COMMUNITIES = {'1': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North
 
 
 def filter_of_community(user_community):
-  if len(user_community) == 5:
+    if len(user_community) == 5:
         user_community
     else: 
         show = "The community is invalid"
@@ -85,7 +85,7 @@ def filter_of_community(user_community):
     return community_meaning
 
 def filter_of_community2(user_community):
-  if len(user_community) == 4:
+    if len(user_community) == 4:
         user_community
     else: 
         show = "The community is invalid"
