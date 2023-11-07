@@ -117,12 +117,56 @@ def filter_of_community3(user_community):
 def filter_of_community4(user_community):
     region_of_origin_token = user_community[1]
     region_of_processing_token = user_community[2]
-    processing_token = user_community[4]
+    processing_token = user_community[3]
     
     community_4_dict = COMMUNITIES['4']
-    if 
+    if region_of_origin_token in community_4_dict.keys():
+        origin_region = community_4_dict[region_of_origin_token]
+    else:
+        origin_region = "The region of origin is invalid"
+        return origin_region
+    
+    if region_of_processing_token in community_4_dict.keys():
+        processing_region = community_4_dict[region_of_processing_token]
+    else:
+        processing_region = "The region of processing is invalid"
+        return processing_region
 
+    #if region_of_origin_token == region_of_processing_token:
+        
+        
+    if processing_token <= '8':
+        processing = 'it\'s reserved'
+    else:
+        processing = 'Don\'t import in {processing_region} region'
+        return processing
+    
+    community_meaning = f"The prefix in {origin_region} (region of origin) to {processing_region} (region of processing), {processing} "
+    return community_meaning
 
+def filter_of_community6(user_community):
+    internal_flag_token = user_community[0]
+    region_of_6_token = user_community[1]
+    pi_port_tag_token = user_community[2:5]
+
+    region_6_dict = COMMUNITIES['6']['X']
+    if region_of_6_token in region_6_dict.keys():
+        region_6 = region_6_dict[region_of_6_token]
+    else:
+        region_6 = "The region is invalid"
+        return region_6
+
+    pi_port_location = COMMUNITIES['6']['YYY'][region_of_6_token]
+
+    if pi_port_tag_token in pi_port_location.keys():
+        pi_port = pi_port_location[pi_port_tag_token]
+    else:
+        pi_port = "The peer is invalid"
+        return pi_port
+
+    community_meaning = f"The prefix in the region of {region_6} in {pi_port}"
+    return community_meaning
+    
 def filter_internal(user_community):
     internal_flag_token = user_community[0]
             
@@ -132,9 +176,11 @@ def filter_internal(user_community):
         return filter_of_community2(user_community)
     elif internal_flag_token == '3':
         return filter_of_community3(user_community)
-    else:
+    elif internal_flag_token == '4':
         return filter_of_community4(user_community)
-    
+    else:
+        return filter_of_community6(user_community)
+        
 
 def run_script():
     if len(sys.argv) != 2:
