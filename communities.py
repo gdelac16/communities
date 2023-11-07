@@ -178,7 +178,7 @@ def filter_internal(user_community):
         return filter_of_community3(user_community)
     elif internal_flag_token == '4':
         return filter_of_community4(user_community)
-    else internal_flag_token == '6':
+    else:
         return filter_of_community6(user_community)
         
 
