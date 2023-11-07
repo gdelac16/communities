@@ -91,13 +91,17 @@ def filter_of_community2(user_community):
         return region
 
     peer_location = COMMUNITIES[internal_flag_token]['YY'][region_token]
+
     if peer_number_token in peer_location.keys():
         peer = peer_location[peer_number_token]
     else:
-        peer = "The peer is invalid"
+        peer = "The community is invalid"
         return peer
 
-    community_meaning = f"The prefix in the region of {region} to the {peer} peer"
+    if internal_flag_token == '2':
+        community_meaning = f"Community applied at ingress in {region} at {peer}"
+    else:
+        community_meaning = f"PI community in {region} region at {peer}"        
     return community_meaning
 
 def filter_of_community3(user_community):
@@ -178,8 +182,10 @@ def filter_internal(user_community):
         return filter_of_community3(user_community)
     elif internal_flag_token == '4':
         return filter_of_community4(user_community)
+    elif internal_flag_token == '6':
+        return filter_of_community4(user_community)
     else:
-        return filter_of_community6(user_community)
+        return 'The community is invalid'
         
 
 def run_script():
