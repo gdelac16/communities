@@ -83,15 +83,14 @@ def filter_of_community2(user_community):
     region_token = user_community[1]
     peer_number_token = user_community[2:4]
     
-    region_dict = COMMUNITIES['2']['X']
+    region_dict = COMMUNITIES[internal_flag_token]['X']
     if region_token in region_dict.keys():
         region = region_dict[region_token]
     else:
         region = "The region is invalid"
         return region
 
-    peer_location = COMMUNITIES['2']['YY'][region_token]
-
+    peer_location = COMMUNITIES[internal_flag_token]['YY'][region_token]
     if peer_number_token in peer_location.keys():
         peer = peer_location[peer_number_token]
     else:
