@@ -161,10 +161,10 @@ def filter_of_community6(user_community):
     if pi_port_tag_token in pi_port_location.keys():
         pi_port = pi_port_location[pi_port_tag_token]
     else:
-        pi_port = "The peer is invalid"
+        pi_port = "The PI is invalid"
         return pi_port
 
-    community_meaning = f"The prefix in the region of {region_6} in {pi_port}"
+    community_meaning = f"Private peering in the region of {region_6} with {pi_port}"
     return community_meaning
     
 def filter_internal(user_community):
