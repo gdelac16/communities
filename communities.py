@@ -47,6 +47,12 @@ COMMUNITIES = {'1': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North
 
 
 def filter_of_community(user_community):
+  if len(user_community) == 5:
+        user_community
+    else: 
+        show = "The community is invalid"
+        return show
+      
     internal_flag_token = user_community[0]
     region_token = user_community[1]
     peer_number_token = user_community[2:4]
@@ -79,6 +85,12 @@ def filter_of_community(user_community):
     return community_meaning
 
 def filter_of_community2(user_community):
+  if len(user_community) == 4:
+        user_community
+    else: 
+        show = "The community is invalid"
+        return show
+    
     internal_flag_token = user_community[0]
     region_token = user_community[1]
     peer_number_token = user_community[2:4]
@@ -105,6 +117,12 @@ def filter_of_community2(user_community):
     return community_meaning
 
 def filter_of_community3(user_community):
+    if len(user_community) == 4:
+        user_community
+    else: 
+        show = "The community is invalid"
+        return show
+
     community_token = user_community[:4]
     
     community_3_dict = COMMUNITIES['3']
@@ -118,6 +136,12 @@ def filter_of_community3(user_community):
     return community_meaning
 
 def filter_of_community4(user_community):
+    if len(user_community) == 4:
+        user_community
+    else: 
+        show = "The community is invalid"
+        return show
+    
     region_of_origin_token = user_community[1]
     region_of_processing_token = user_community[2]
     processing_token = user_community[3]
@@ -149,6 +173,12 @@ def filter_of_community4(user_community):
     return community_meaning
 
 def filter_of_community6(user_community):
+    if len(user_community) == 6:
+        user_community
+    else: 
+        show = "The community is invalid"
+        return show
+    
     internal_flag_token = user_community[0]
     region_of_6_token = user_community[1]
     pi_port_tag_token = user_community[2:5]
