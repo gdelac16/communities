@@ -110,7 +110,7 @@ def filter_of_community3(user_community):
         community_3 = "The community is invalid"
         return community_3
     
-    community_meaning = f"The prefix in {community_3}"
+    community_meaning = f"Community applied at ingress {community_3}"
     return community_meaning
 
 def filter_of_community4(user_community):
