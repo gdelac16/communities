@@ -1,11 +1,11 @@
 from distutils.core import setup
 
 setup(
-    name='communities',
+    name='community',
     version='2.0',
     py_modules=['communities'],
     entry_points={
-        "console_scripts": ["communities=communities:run_script"]
+        "console_scripts": ["community=communities:run_script"]
     },
     license='',
     author='Gladys',
