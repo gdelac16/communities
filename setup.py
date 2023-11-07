@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='communities',
-    version='1.9',
+    version='2.0',
     py_modules=['communities'],
     entry_points={
         "console_scripts": ["communities=communities:run_script"]
