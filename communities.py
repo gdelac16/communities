@@ -132,8 +132,9 @@ def filter_of_community4(user_community):
         processing_region = "The region of processing is invalid"
         return processing_region
 
-    #if region_of_origin_token == region_of_processing_token:
-        
+    if region_of_origin_token == region_of_processing_token:
+        show_this_result = f"{processing_region}\'s the route is not imported by regional RR in {origin_region} region"
+        return show_this_result  
         
     if processing_token <= '8':
         processing = 'it\'s reserved'
@@ -178,7 +179,7 @@ def filter_internal(user_community):
         return filter_of_community3(user_community)
     elif internal_flag_token == '4':
         return filter_of_community4(user_community)
-    else:
+    else internal_flag_token == '6':
         return filter_of_community6(user_community)
         
 
