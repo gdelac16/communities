@@ -29,7 +29,8 @@ COMMUNITIES = {'1': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North
                             '6': {'00': 'All', '98': 'Infonas AS35313/Bahrain (IPTP AS51601)', '99': 'CenturyLink/Dubai'},
                             '7': {'00': 'All', '01': 'IX.BR (Sao Paolo)', '02': 'IX.BR (Fortaleza)', '03': 'Lima/CTL', '04': 'Lima/AmTel', '05': 'Lima/JumboIX', '06': 'Santiago/Level3(Huecheraba)', '07': 'EIE (Sao Paolo)', '98': 'CenturyLink/Brazil/Fortaleza', '99': 'CenturyLink/Peru/Lima'}}},
                '3': {'3000': 'All direct customers', '3010': 'IX-Transit customers', '3020': 'All Anycast customers', '3100': 'EU direct customers', '3101': 'AMS direct customers additional community', '3120': 'EU Anycast customers', '3200': 'Russian direct customers', '3210': 'Russian IX-Transit customers', '3220': 'Russian Anycast customers', '3300': 'NA direct customers', '3320': 'NA Anycast customers', '3400': 'AP direct customers', '3401': 'HK direct customers additional community', '3402': 'SG direct customers additional community', '3403': 'TY direct customers additional community', '3404': 'VN direct customers additional community', '3405': 'MY direct customers additional community', '3406': 'TW direct customers additional community', '3407': 'ID direct customers additional community', '3408': 'KR direct customers additional community', '3410': 'AP IX-Transit customers', '3420': 'AP Anycast customers', '3500': 'Africa direct customers', '3520': 'Africa Anycast customers', '3600': 'ME direct customers', '3620': 'ME Anycast customers', '3700': 'South America direct customers', '3720': 'South America Anycast customers'},
-               '4': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'USA', '4': 'APAC', '5': 'Africa', '6': 'Middle East (ME)'},
+               '4': {'4': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'USA', '4': 'APAC', '5': 'Africa', '6': 'Middle East (ME)'},
+                     'Z': {'0': 'it\'s reserved', '1': 'it\'s reserved', '2': 'it\'s reserved', '3': 'it\'s reserved', '4': 'it\'s reserved', '5': 'it\'s reserved', '6': 'it\'s reserved', '7': 'it\'s reserved', '8': 'it\'s reserved', }},
                '5': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'USA', '4': 'Asia', '5': 'Africa', '7': 'South America'},
                     'YY':{'0': {'00': 'All'},
                           '1':{'00': 'All', '01': 'AMS-NKF', '02': 'FRF-Ancotel', '03': 'FRF-NewTelco', '04': 'IXN-Zurich', '05': 'AMS-T1', '06': 'TH2-Paris', '07': 'Kiev-Newtelco', '08': 'London-LD5', '09': 'London-LD8 (Telecity 2)', '10': 'MRS-NetCenter', '11': 'Sofia Telepoint'},
@@ -47,12 +48,10 @@ COMMUNITIES = {'1': {'X': {'0': 'All', '1': 'Europe', '2': 'Russia', '3': 'North
 
 
 def filter_of_community(user_community):
-    if len(user_community) == 5:
-        user_community
-    else: 
+    if len(user_community) != 5:
         show = "The community is invalid"
         return show
-      
+        
     internal_flag_token = user_community[0]
     region_token = user_community[1]
     peer_number_token = user_community[2:4]
@@ -86,8 +85,6 @@ def filter_of_community(user_community):
 
 def filter_of_community2(user_community):
     if len(user_community) == 4:
-        user_community
-    else: 
         show = "The community is invalid"
         return show
     
@@ -118,8 +115,6 @@ def filter_of_community2(user_community):
 
 def filter_of_community3(user_community):
     if len(user_community) == 4:
-        user_community
-    else: 
         show = "The community is invalid"
         return show
 
@@ -132,13 +127,11 @@ def filter_of_community3(user_community):
         community_3 = "The community is invalid"
         return community_3
     
-    community_meaning = f"Community applied at ingress {community_3}"
+    community_meaning = f"Community applied at ingress in {community_3}"
     return community_meaning
 
 def filter_of_community4(user_community):
-    if len(user_community) == 4:
-        user_community
-    else: 
+    if len(user_community) != 4:
         show = "The community is invalid"
         return show
     
@@ -163,10 +156,15 @@ def filter_of_community4(user_community):
         show_this_result = f"{processing_region}\'s the route is not imported by regional RR in {origin_region} region"
         return show_this_result  
         
-    if processing_token <= '8':
-        processing = 'it\'s reserved'
-    else:
-        processing = 'Don\'t import in {processing_region} region'
+    processing_number = COMMUNITIES['4']['Z']
+
+    if processing_token in processing_number.keys():
+        processing = processing_number[processing_token]
+    elif processing_token == '9':
+        processing = f"Don\'t import in {processing_region} region"
+        return processing
+    else: 
+        processing = 'The community is invalid'
         return processing
     
     community_meaning = f"The prefix in {origin_region} (region of origin) to {processing_region} (region of processing), {processing} "
@@ -174,8 +172,6 @@ def filter_of_community4(user_community):
 
 def filter_of_community6(user_community):
     if len(user_community) == 6:
-        user_community
-    else: 
         show = "The community is invalid"
         return show
     
