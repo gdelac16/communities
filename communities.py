@@ -161,7 +161,7 @@ def filter_of_community4(user_community):
     if processing_token in processing_number.keys():
         processing = processing_number[processing_token]
     elif processing_token == '9':
-        processing = f"Don\'t import in {processing_region} region"
+        processing = f"Don\'t import in {processing_region} region from {origin_region}"
         return processing
     else: 
         processing = 'The community is invalid'
