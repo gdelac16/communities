@@ -138,14 +138,14 @@ def filter_of_community4(user_community):
     region_of_origin_token = user_community[1]
     region_of_processing_token = user_community[2]
     processing_token = user_community[3]
-    
-    community_4_dict = COMMUNITIES['4']
+
+    community_4_dict = COMMUNITIES['4']['4']
     if region_of_origin_token in community_4_dict.keys():
         origin_region = community_4_dict[region_of_origin_token]
     else:
         origin_region = "The region of origin is invalid"
         return origin_region
-    
+
     if region_of_processing_token in community_4_dict.keys():
         processing_region = community_4_dict[region_of_processing_token]
     else:
