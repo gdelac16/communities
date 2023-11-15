@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af2563e4-7fa9-4347-a9e1-8d8bf69cc41e" name="Changes" comment="new_version">
+    <list default="true" id="956907be-282a-4d09-87e2-98a335664a1b" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/communities.py" beforeDir="false" afterPath="$PROJECT_DIR$/communities.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,104 +12,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2WfUH2Qw3OjEm4R9Gh75DxCyoCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Gladys/Downloads/communities.py",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
-  }
-}]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="af2563e4-7fa9-4347-a9e1-8d8bf69cc41e" name="Changes" comment="" />
-      <created>1697123037902</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1697123037902</updated>
-    </task>
-    <task id="LOCAL-00001" summary="changes for the prepents">
-      <created>1697123621961</created>
+    <task id="LOCAL-00001" summary="new version">
+      <created>1700068446568</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1697123621962</updated>
+      <updated>1700068446568</updated>
     </task>
-    <task id="LOCAL-00002" summary="run via single cli line">
-      <created>1697620310198</created>
+    <task id="LOCAL-00002" summary="Added .gitignore">
+      <created>1700069164817</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1697620310198</updated>
+      <updated>1700069164817</updated>
     </task>
-    <task id="LOCAL-00003" summary="run via single cli line">
-      <created>1697620349671</created>
+    <task id="LOCAL-00003" summary="update">
+      <created>1700071732708</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1697620349671</updated>
+      <updated>1700071732708</updated>
     </task>
-    <task id="LOCAL-00004" summary="Changes to correct code">
-      <created>1698238366303</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698238366303</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Changes">
-      <created>1698266179318</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698266179318</updated>
-    </task>
-    <task id="LOCAL-00006" summary="new version">
-      <created>1698344529826</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698344529826</updated>
-    </task>
-    <task id="LOCAL-00007" summary="new_version">
-      <created>1698344700309</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698344700309</updated>
-    </task>
-    <task id="LOCAL-00008" summary="new_version">
-      <created>1698354728961</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698354728961</updated>
-    </task>
-    <task id="LOCAL-00009" summary="new_version">
-      <created>1698356085561</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1698356085561</updated>
-    </task>
-    <task id="LOCAL-00010" summary="new_version">
-      <created>1698363560593</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1698363560593</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,12 +54,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes for the prepents" />
-    <MESSAGE value="run via single cli line" />
-    <MESSAGE value="Changes to correct code" />
-    <MESSAGE value="Changes" />
     <MESSAGE value="new version" />
-    <MESSAGE value="new_version" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_version" />
+    <MESSAGE value="Added .gitignore" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
