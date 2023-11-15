@@ -84,7 +84,7 @@ def filter_of_community(user_community):
     return community_meaning
 
 def filter_of_community2(user_community):
-    if len(user_community) == 4:
+    if len(user_community) != 4:
         show = "The community is invalid"
         return show
     
@@ -114,7 +114,7 @@ def filter_of_community2(user_community):
     return community_meaning
 
 def filter_of_community3(user_community):
-    if len(user_community) == 4:
+    if len(user_community) != 4:
         show = "The community is invalid"
         return show
 
@@ -171,7 +171,7 @@ def filter_of_community4(user_community):
     return community_meaning
 
 def filter_of_community6(user_community):
-    if len(user_community) == 6:
+    if len(user_community) != 5:
         show = "The community is invalid"
         return show
     
@@ -209,7 +209,7 @@ def filter_internal(user_community):
     elif internal_flag_token == '4':
         return filter_of_community4(user_community)
     elif internal_flag_token == '6':
-        return filter_of_community4(user_community)
+        return filter_of_community6(user_community)
     else:
         return 'The community is invalid'
         
